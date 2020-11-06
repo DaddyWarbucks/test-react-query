@@ -970,7 +970,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.3", "@babel/runtime@^7.12.1", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.3", "@babel/runtime@^7.10.5", "@babel/runtime@^7.12.1", "@babel/runtime@^7.9.2":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -1048,6 +1048,42 @@
     lodash "^4.17.19"
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
+
+"@feathersjs/adapter-commons@^4.3.6":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@feathersjs/adapter-commons/-/adapter-commons-4.5.7.tgz#8808bd0392a63713f1a7bead44a2910fcebf8152"
+  integrity sha512-968FYEeX5S790dhhPf/u1RBhh8824jW6fRb0bmWqGpzjEkC7dNJ9+m+j3/Gduh1cPGL1a6Nf5sXkkMEFWDJ4tw==
+  dependencies:
+    "@feathersjs/commons" "^4.5.8"
+    "@feathersjs/errors" "^4.5.8"
+    "@feathersjs/feathers" "^4.5.8"
+
+"@feathersjs/client@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@feathersjs/client/-/client-4.5.9.tgz#4ddb83cb93196a93fd4b15dbaf9546f765c9039b"
+  integrity sha512-lCMc7hStJdeJlkldfuL4gWI1iLnoeZPwbszcJJ5EpwdMa7XwhHL3IWyXwmftvY9ozM3FmfpaiBBDwPZjt1CylQ==
+
+"@feathersjs/commons@^4.3.0", "@feathersjs/commons@^4.5.8", "@feathersjs/commons@^4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@feathersjs/commons/-/commons-4.5.9.tgz#07340081b52b6c012b23019d65b8980118cb02d6"
+  integrity sha512-CiM6t9ljxcLwqQe2AkfCQqH2qFssjWYoP4z/Ida3IE+bMHMcQQv7aERYbQA6865FEIaHv9ytJL+QabfaUPhKAA==
+
+"@feathersjs/errors@^4.3.4", "@feathersjs/errors@^4.5.8":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@feathersjs/errors/-/errors-4.5.9.tgz#8e998c59c01454a92f802f9b4846aafc3a677a83"
+  integrity sha512-JqrtbOk3EK5nSal9zI8OGO7qVVYRDDnHarYeINhftAJ26rz0H+Q9qRVrp26TVZ5RKCbXABKP6ObvmNw/gMkFvg==
+  dependencies:
+    debug "^4.2.0"
+
+"@feathersjs/feathers@^4.5.8":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@feathersjs/feathers/-/feathers-4.5.9.tgz#73ba6d51f7b15c4eb35ceb925f936e5edab4cede"
+  integrity sha512-vrNO71yhJ2t3nCkrMPvLv80VlJQHlusfCd44h/oXhfqADfHo8V73xEYUw9RVn5AuQrpk+eVTn2dX6VQaQjE2FQ==
+  dependencies:
+    "@feathersjs/commons" "^4.5.9"
+    debug "^4.2.0"
+    events "^3.2.0"
+    uberproto "^2.0.6"
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -3763,7 +3799,7 @@ debug@^3.1.1, debug@^3.2.5:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
+debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.2.0.tgz#7f150f93920e94c58f5574c2fd01a3110effe7f1"
   integrity sha512-IX2ncY78vDTjZMFUdmsvIRFY2Cf4FnD0wRs+nQwJU8Lu99/tPFdb0VybiiMTPe3I6rQmwsqQqRBvxU+bZ/I8sg==
@@ -4561,7 +4597,7 @@ eventemitter3@^4.0.0:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
-events@^3.0.0:
+events@^3.0.0, events@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/events/-/events-3.2.0.tgz#93b87c18f8efcd4202a461aec4dfc0556b639379"
   integrity sha512-/46HWwbfCX2xTawVfkKLGxMifJYQBWMwY1mjywRtb4c9x8l5NP3KoJtnIOiL1hfdRkIuYhETxQlo62IF8tcnlg==
@@ -4794,6 +4830,24 @@ fb-watchman@^2.0.0:
   integrity sha512-DkPJKQeY6kKwmuMretBhr7G6Vodr7bFwDYTXIkfG1gjvNpaxBTQV3PbXg6bR1c1UP4jPOX0jHUbbHANL9vRjVg==
   dependencies:
     bser "2.1.1"
+
+feathers-localstorage@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/feathers-localstorage/-/feathers-localstorage-5.1.1.tgz#b31fcd7edab526d610326f0e0a0380f727518ac9"
+  integrity sha512-Gi9hYCKDwckbljgk+f6mVn7Qt4CdYhnB1Gxjlc6XpND24K6UHZjoCwH7HX/WWINaxcgrmjv72nYiui+q8i5VOg==
+  dependencies:
+    debug "^4.1.1"
+    feathers-memory "^4.1.0"
+
+feathers-memory@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/feathers-memory/-/feathers-memory-4.1.0.tgz#3cd70e20ebf1dfe4b996e8bf0a22b65cdb8173a3"
+  integrity sha512-tR8DFqLsSk2w7tpSdHjA5RgPHTu3X5R3L3Kob2K+E3b/Q5cDkI6AYQarDQOiwekAyqxkkp/fm7Fg0qYdu4Ua6Q==
+  dependencies:
+    "@feathersjs/adapter-commons" "^4.3.6"
+    "@feathersjs/commons" "^4.3.0"
+    "@feathersjs/errors" "^4.3.4"
+    sift "^8.5.0"
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
@@ -6973,6 +7027,14 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+match-sorter@^4.1.0:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/match-sorter/-/match-sorter-4.2.1.tgz#575b4b3737185ba9518b67612b66877ea0b37358"
+  integrity sha512-s+3h9TiZU9U1pWhIERHf8/f4LmBN6IXaRgo2CI17+XGByGS1GvG5VvXK9pcGyCjGe3WM3mSYRC3ipGrd5UEVgw==
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    remove-accents "0.4.2"
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
@@ -8975,6 +9037,20 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-query-devtools@^2.6.3:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/react-query-devtools/-/react-query-devtools-2.6.3.tgz#f7c982839d4b0001cee4d5ddfa826493c2f6341f"
+  integrity sha512-pSvWq5Q8zgIP7QbF0+4BerCHLaLn5HPzce7sIXYqz4XEizcYJHkJtcrAwn6bUkCu5JmAt1Y7fViQtZwOIG2SYA==
+  dependencies:
+    match-sorter "^4.1.0"
+
+react-query@^2.26.2:
+  version "2.26.2"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.26.2.tgz#d6fb2dd0b54934f5d1f5cdd9f8d97808eb012eb7"
+  integrity sha512-tJ3oHifWtI3cwklOLx5jIIj1ZpmvuWpPBg5iaOoi3uuIe80l0t3QCDTEF+nXpE12pYxKMj29NQ5OkTsOOMdP4Q==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
@@ -9225,6 +9301,11 @@ relateurl@^0.2.7:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+remove-accents@0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/remove-accents/-/remove-accents-0.4.2.tgz#0a43d3aaae1e80db919e07ae254b285d9e1c7bb5"
+  integrity sha1-CkPTqq4egNuRngeuJUsoXZ4ce7U=
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -9790,6 +9871,11 @@ side-channel@^1.0.2:
   dependencies:
     es-abstract "^1.18.0-next.0"
     object-inspect "^1.8.0"
+
+sift@^8.5.0:
+  version "8.5.1"
+  resolved "https://registry.yarnpkg.com/sift/-/sift-8.5.1.tgz#22a29e1a3332e8f8d372dc5999f5cc3093778fe8"
+  integrity sha512-um2rEdXrc4YcRMzIliuip4i2o92mJONh5W1VD9vJlm1e0apVqMK4P2ZUijz8BIe1/oYLWmXwXaKFM+fOaO3Ysg==
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.3"
@@ -10663,6 +10749,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+uberproto@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/uberproto/-/uberproto-2.0.6.tgz#709274d183bce6fb734dfd3880d2086ed72b69e5"
+  integrity sha512-68H97HffZoFaa3HFtpstahWorN9dSp5uTU6jo3GjIQ6JkJBR3hC2Nx/e/HFOoYHdUyT/Z1MRWfxN1EiQJZUyCQ==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
