@@ -11,7 +11,6 @@ module.exports = function (app) {
     before: {
       all: [
         context => {
-          console.log('Hello from batch!');
           console.log(context.data.calls);
         }
       ]

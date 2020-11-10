@@ -6,19 +6,28 @@ import io from 'socket.io-client';
 import { ReactQueryDevtools } from 'react-query-devtools';
 import './App.css';
 
+// Hmmmm....this is throwing an "invalid TLS handshake" error.
+// Not worried about it here bc feathers-batch is more advantageous
+// over REST anyway. But, I should get this running to determine if
+// the feathers-batch 50ms timeout is enough to batch socket calls
 // const socket = io('http://api.my-feathers-server.com', {
 //   transports: ['websocket'],
 //   forceNew: true
 // });
 const app = feathers();
 // app.configure(feathers.socketio(socket));
-
 app.configure(feathers.rest('http://localhost:3030').fetch(fetch));
 
 app.configure(batchClient({
   batchService: 'batch'
 }));
 
+
+// A half baked attempt at adding react-query to feathers. This is not
+// necessary but I thought it would be nice for the hooks to be on the
+// service interface so the dev can "just use the service interface".
+// It also renames react-quey's `data` to `result` to better align with
+// feathers conventions.
 app.configure(function () {
 
   app.getServiceName = (service) => {
@@ -115,17 +124,10 @@ app.configure(function () {
 const albumsService = app.service('albums');
 const artistsService = app.service('artists');
 
+
+// Add some "join" hooks to see if/how/when feathers-batch can do its
+// thing. This is a prime candidate for having feathers-batch actually
 artistsService.hooks({
-  before: {
-    // all: [
-    //   async ctx => {
-    //     const prom = () => new Promise(resolve => setTimeout(resolve, 500));
-    //     await prom();
-    //     console.log('inflight');
-    //     return ctx;
-    //   }
-    // ]
-  },
   after: {
     find: [
       async ctx => {
@@ -148,23 +150,6 @@ artistsService.hooks({
   }
 });
 
-// todosService.create({
-//   id: Date.now(),
-//   title: 'Do Laundry'
-// });
-
-// todosService.find().then(console.log).catch(console.error);
-
-albumsService.on('created', album => {
-  artistsService.invalidateFind();
-  artistsService.invalidateGet(album.artistId);
-});
-
-albumsService.on('patched', album => {
-  artistsService.invalidateFind();
-  artistsService.invalidateGet(album.artistId);
-});
-
 function CreateArtist() {
   const [artist, setArtist] = useState({ name: '' });
   const [createArtist, { isLoading }] = artistsService.useCreate();
@@ -184,7 +169,7 @@ function CreateArtist() {
         }}
       >
         Add Artist
-        </button>
+      </button>
     </div>
   );
 }
