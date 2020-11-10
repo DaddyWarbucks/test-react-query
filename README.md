@@ -11,4 +11,4 @@ yarn
 yarn dev
 ```
 
-See this < 5 min vid for more details
+See this < 5 min vid for more details [Video](https://www.loom.com/share/20aa5d5d5b0649448c7430110ac9d38d)
